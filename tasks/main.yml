@@ -10,7 +10,7 @@
 - name: install...
   with_items:
     - {f : LICENSE, m : '0644' }
-    - {f : galaxify.sh, m : '0755' }
+    - {f : galaxify, m : '0755' }
     - {f : meta-main.yml, m : '0644' }
     - {f : test.yml, m : '0644' }
   template: >-
@@ -31,8 +31,8 @@
 
 - name: include galaxify.sh in the default path...
   copy: >-
-    src=etc/profile.d/galaxify-path.sh
-    dest=/etc/profile.d/galaxify-path.sh
+    src=etc/profile.d/galaxify.sh
+    dest=/etc/profile.d/galaxify.sh
     mode=0644
     owner=root
     group=root

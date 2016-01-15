@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+DEST=$1
+SRC={{galaxify_install_dir}}
+
+echo '**~' >> $DEST/.gitignore
+mkdir -p $DEST/{defaults,meta,vars,files,tasks,templates}
+cp $SRC/LICENSE $DEST/LICENSE
+cp $SRC/meta-main.yml $DEST/meta/main.yml
+cp $SRC/test.yml $DEST/test.yml

@@ -1,0 +1,38 @@
+---
+- name: create target install dir...
+  file: >-
+    path={{galaxify_install_dir}}
+    state=directory
+    owner=root
+    group=root
+    mode=0755
+
+- name: install...
+  with_items:
+    - {f : LICENSE, m : '0644' }
+    - {f : galaxify.sh, m : '0755' }
+    - {f : meta-main.yml, m : '0644' }
+    - {f : test.yml, m : '0644' }
+  template: >-
+    src={{item.f}}.j2
+    dest={{galaxify_install_dir}}/{{item.f}}
+    mode={{item.m}}
+    owner=root
+    group=root
+
+
+- name: link the released galaxify...
+  file: >-
+    src={{galaxify_install_dir}}
+    dest=/opt/galaxify
+    state=link
+    owner=root
+    group=root
+
+- name: include galaxify.sh in the default path...
+  copy: >-
+    src=etc/profile.d/galaxify-path.sh
+    dest=/etc/profile.d/galaxify-path.sh
+    mode=0644
+    owner=root
+    group=root

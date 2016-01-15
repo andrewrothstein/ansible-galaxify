@@ -1,0 +1,12 @@
+---
+- hosts: all
+  roles:
+    - { role: '.' }
+#    - {
+#    role: '.',
+#    julia_use_pkgs : False,
+#    julia_build_src : True,
+#    julia_build_repo : 'git://github.com/mdcfrancis/julia.git',
+#    julia_build_branch : 'mdf_verbose_precompile',
+#    julia_build_cleanup : False
+#    }

@@ -1,0 +1,3 @@
+---
+# vars file for galaxify
+galaxify_install_dir : '/opt/galaxify-{{galaxify_ver}}'

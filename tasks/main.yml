@@ -1,5 +1,7 @@
 ---
 - name: create target install dir...
+  become: yes
+  become_user: root
   file: >-
     path={{galaxify_install_dir}}
     state=directory
@@ -8,6 +10,8 @@
     mode=0755
 
 - name: install...
+  become: yes
+  become_user: root
   with_items:
     - {f : LICENSE, m : '0644' }
     - {f : galaxify, m : '0755' }
@@ -17,22 +21,19 @@
     src={{item.f}}.j2
     dest={{galaxify_install_dir}}/{{item.f}}
     mode={{item.m}}
-    owner=root
-    group=root
-
 
 - name: link the released galaxify...
+  become: yes
+  become_user: root
   file: >-
     src={{galaxify_install_dir}}
     dest=/opt/galaxify
     state=link
-    owner=root
-    group=root
 
 - name: include galaxify.sh in the default path...
+  become: yes
+  become_user: root
   copy: >-
     src=etc/profile.d/galaxify.sh
     dest=/etc/profile.d/galaxify.sh
     mode=0644
-    owner=root
-    group=root

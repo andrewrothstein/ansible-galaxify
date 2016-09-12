@@ -5,20 +5,30 @@
   file: >-
     path={{galaxify_install_dir}}
     state=directory
-    owner=root
-    group=root
     mode=0755
 
-- name: install...
+- name: templatize...
   become: yes
   become_user: root
   with_items:
     - {f : LICENSE, m : '0644' }
+    - {f : README.md, m: '0644' }
     - {f : galaxify, m : '0755' }
     - {f : meta-main.yml, m : '0644' }
     - {f : test.yml, m : '0644' }
   template: >-
     src={{item.f}}.j2
+    dest={{galaxify_install_dir}}/{{item.f}}
+    mode={{item.m}}
+
+- name: templatize...
+  become: yes
+  become_user: root
+  with_items:
+    - {f : task-main.yml, m : '0644' }
+    - {f : .gitignore, m: '0644' }
+  copy: >-
+    src={{item.f}}
     dest={{galaxify_install_dir}}/{{item.f}}
     mode={{item.m}}
 

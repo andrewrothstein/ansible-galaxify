@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 DEST=$1
-SRC={{galaxify_install_dir}}
+SRC={{galaxify_install_target}}
 
 mkdir -p $DEST/{defaults,meta,vars,files,tasks,templates}
 cp $SRC/.gitignore $DEST/.gitignore

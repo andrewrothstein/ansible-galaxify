@@ -6,3 +6,5 @@ galaxify_mitlicense_copyright_year : '2016'
 galaxify_mitlicense_holder : 'Andrew Rothstein'
 
 galaxify_company : 'BlackRock'
+
+galaxify_install_dir: /usr/local/bin

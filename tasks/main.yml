@@ -3,7 +3,7 @@
   become: yes
   become_user: root
   file: >-
-    path={{galaxify_install_dir}}
+    path={{galaxify_target_dir}}
     state=directory
     mode=0755
 
@@ -18,10 +18,10 @@
     - {f : test.yml, m : '0644' }
   template: >-
     src={{item.f}}.j2
-    dest={{galaxify_install_dir}}/{{item.f}}
+    dest={{galaxify_target_dir}}/{{item.f}}
     mode={{item.m}}
 
-- name: templatize...
+- name: copy...
   become: yes
   become_user: root
   with_items:
@@ -29,21 +29,15 @@
     - {f : .gitignore, m: '0644' }
   copy: >-
     src={{item.f}}
-    dest={{galaxify_install_dir}}/{{item.f}}
+    dest={{galaxify_target_dir}}/{{item.f}}
     mode={{item.m}}
 
 - name: link the released galaxify...
   become: yes
   become_user: root
+  with_items:
+    - galaxify
   file: >-
-    src={{galaxify_install_dir}}
-    dest=/opt/galaxify
+    src={{galaxify_target_dir}}/{{item}}
+    dest={{galaxify_install_dir}}/{{item}}
     state=link
-
-- name: include galaxify.sh in the default path...
-  become: yes
-  become_user: root
-  copy: >-
-    src=etc/profile.d/galaxify.sh
-    dest=/etc/profile.d/galaxify.sh
-    mode=0644

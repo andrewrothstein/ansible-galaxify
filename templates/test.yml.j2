@@ -1,4 +1,7 @@
+{% raw %}
 ---
 - hosts: all
   roles:
-    - { role: '.' }
+    - role: '{{playbook_dir}}'
+{% endraw %}
+      

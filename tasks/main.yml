@@ -16,6 +16,7 @@
     - {f : galaxify, m : '0755' }
     - {f : meta-main.yml, m : '0644' }
     - {f : test.yml, m : '0644' }
+    - {f : circle.yml, m: '0644' }
   template: >-
     src={{item.f}}.j2
     dest={{galaxify_target_dir}}/{{item.f}}

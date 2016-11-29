@@ -4,6 +4,7 @@ galaxify_ver : '1.0'
 # defaults file for galaxify
 galaxify_mitlicense_copyright_year : '2016'
 galaxify_mitlicense_holder : 'Andrew Rothstein'
+galaxify_mitlicense_holder_email: 'andrew.rothstein@gmail.com'
 
 galaxify_company : 'BlackRock'
 

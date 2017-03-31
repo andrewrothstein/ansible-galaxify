@@ -9,3 +9,5 @@ galaxify_mitlicense_holder_email: andrew.rothstein@gmail.com
 galaxify_company : BlackRock
 
 galaxify_install_dir: /usr/local/bin
+
+galaxify_dcb_ver: '0.0.10'

@@ -17,10 +17,10 @@
     - {f : meta-main.yml, m : '0644' }
     - {f : test.yml, m : '0644' }
     - {f : circle.yml, m: '0644' }
-  template: >-
-    src={{item.f}}.j2
-    dest={{galaxify_target_dir}}/{{item.f}}
-    mode={{item.m}}
+  template:
+    src: '{{item.f}}.j2'
+    dest: '{{galaxify_target_dir}}/{{item.f}}'
+    mode: '{{item.m}}'
 
 - name: copy...
   become: yes
@@ -28,10 +28,10 @@
   with_items:
     - {f : task-main.yml, m : '0644' }
     - {f : .gitignore, m: '0644' }
-  copy: >-
-    src={{item.f}}
-    dest={{galaxify_target_dir}}/{{item.f}}
-    mode={{item.m}}
+  copy:
+    src: '{{item.f}}'
+    dest: '{{galaxify_target_dir}}/{{item.f}}'
+    mode: '{{item.m}}'
 
 - name: link the released galaxify...
   become: yes

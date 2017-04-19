@@ -1,11 +1,12 @@
 ---
-galaxify_ver : '1.0.15'
+galaxify_ver : '1.0.16'
 
 # defaults file for galaxify
 galaxify_mitlicense_copyright_year : '2017'
 galaxify_mitlicense_holder : Andrew Rothstein
 galaxify_mitlicense_holder_email: andrew.rothstein@gmail.com
 
+galaxify_username: andrewrothstein
 galaxify_company : BlackRock
 
 galaxify_install_dir: /usr/local/bin

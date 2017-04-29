@@ -1,5 +1,5 @@
 ---
-galaxify_ver : '1.0.16'
+galaxify_ver : '1.0.17'
 
 # defaults file for galaxify
 galaxify_mitlicense_copyright_year : '2017'
@@ -11,4 +11,4 @@ galaxify_company : BlackRock
 
 galaxify_install_dir: /usr/local/bin
 
-galaxify_dcb_ver: '0.0.12'
+galaxify_dcb_ver: '0.0.14'

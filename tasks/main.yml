@@ -2,43 +2,45 @@
 - name: create target install dir...
   become: yes
   become_user: root
-  file: >-
-    path={{galaxify_target_dir}}
-    state=directory
-    mode=0755
+  file:
+    path: '{{galaxify_target_dir}}'
+    state: directory
+    mode: 0755
 
 - name: templatize...
   become: yes
   become_user: root
   with_items:
-    - {f : LICENSE, m : '0644' }
-    - {f : README.md, m: '0644' }
-    - {f : galaxify, m : '0755' }
-    - {f : meta-main.yml, m : '0644' }
-    - {f : test.yml, m : '0644' }
-    - {f : circle.yml, m: '0644' }
+    - f : LICENSE
+    - f : README.md
+    - f : galaxify
+      m : '0755'
+    - f : meta-main.yml
+    - f : test.yml
+    - f : circle.yml
+    - f : .travis.yml
   template:
     src: '{{item.f}}.j2'
     dest: '{{galaxify_target_dir}}/{{item.f}}'
-    mode: '{{item.m}}'
+    mode: '{{item.m | default("0644")}}'
 
 - name: copy...
   become: yes
   become_user: root
   with_items:
-    - {f : task-main.yml, m : '0644' }
-    - {f : .gitignore, m: '0644' }
+    - f : task-main.yml
+    - f : .gitignore
   copy:
     src: '{{item.f}}'
     dest: '{{galaxify_target_dir}}/{{item.f}}'
-    mode: '{{item.m}}'
+    mode: '{{item.m | default("0644")}}'
 
 - name: link the released galaxify...
   become: yes
   become_user: root
   with_items:
     - galaxify
-  file: >-
-    src={{galaxify_target_dir}}/{{item}}
-    dest={{galaxify_install_dir}}/{{item}}
-    state=link
+  file:
+    src: '{{galaxify_target_dir}}/{{item}}'
+    dest: '{{galaxify_install_dir}}/{{item}}'
+    state: link

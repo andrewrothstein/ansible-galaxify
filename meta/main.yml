@@ -16,6 +16,9 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
+    - name: Debian
+      versions:
+        - jessie
     - name: MacOSX
       versions:
         - all
@@ -24,4 +27,3 @@ galaxy_info:
     - development
 
 dependencies: []
-  

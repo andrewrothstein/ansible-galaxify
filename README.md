@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-galaxify.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-galaxify)
 andrewrothstein.galaxify
 ===========================
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-galaxify.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-galaxify)
 
 A script I use for branding/licensing Ansible roles form the get-go.
 

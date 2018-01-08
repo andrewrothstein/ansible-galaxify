@@ -1,8 +1,8 @@
 ---
-galaxify_ver : '1.0.24'
+galaxify_ver : '1.0.25'
 
 # defaults file for galaxify
-galaxify_mitlicense_copyright_year : '2017'
+galaxify_mitlicense_copyright_year : '2018'
 galaxify_mitlicense_holder : Andrew Rothstein
 galaxify_mitlicense_holder_email: andrew.rothstein@gmail.com
 

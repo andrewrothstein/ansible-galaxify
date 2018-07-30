@@ -26,7 +26,6 @@ galaxy_info:
     - name: MacOSX
       versions:
         - all
-
   galaxy_tags:
     - development
 

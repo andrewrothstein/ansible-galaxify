@@ -1,8 +1,8 @@
 ---
-galaxify_ver: '1.0.28'
+galaxify_ver: '1.0.29'
 
 # defaults file for galaxify
-galaxify_mitlicense_copyright_year: '2018'
+galaxify_mitlicense_copyright_year: '2019'
 galaxify_mitlicense_holder: Andrew Rothstein
 galaxify_mitlicense_holder_email: andrew.rothstein@gmail.com
 
@@ -11,4 +11,4 @@ galaxify_company: BlueMountain Capital
 
 galaxify_install_dir: /usr/local/bin
 
-galaxify_dcb_ver: '0.0.14'
+galaxify_dcb_ver: '0.0.16'

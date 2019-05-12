@@ -3,11 +3,12 @@ DEST=$1
 SRC={{galaxify_target_dir}}
 
 mkdir -p $DEST/{defaults,meta,vars,files,tasks,templates}
-cp $SRC/.gitignore $DEST/.gitignore
-cp $SRC/README.md $DEST/README.md
-cp $SRC/LICENSE $DEST/LICENSE
-cp $SRC/meta-main.yml $DEST/meta/main.yml
-cp $SRC/task-main.yml $DEST/tasks/main.yml
-cp $SRC/test.yml $DEST/test.yml
-cp $SRC/circle.yml $DEST/circle.yml
-cp $SRC/.travis.yml $DEST/.travis.yml
+for FILE in .gitignore README.md LICENSE test.yml .travis.yml dcb-os.yml
+do
+    cp $SRC/$FILE $DEST/$FILE
+done
+
+for MAIN in meta task
+do
+    cp $SRC/${MAIN}-main.yml $DEST/$MAIN/main.yml
+done

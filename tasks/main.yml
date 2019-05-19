@@ -28,7 +28,7 @@
   become: yes
   become_user: root
   with_items:
-    - f: task-main.yml
+    - f: tasks-main.yml
     - f: .gitignore
     - f: .pre-commit-config.yaml
     - f: dcb-os.yml

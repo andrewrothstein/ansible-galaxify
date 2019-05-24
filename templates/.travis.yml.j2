@@ -29,6 +29,7 @@ env:
 language: python
 python: {{ galaxify_python_ver }}
 script:
+- ansible-galaxy-local-deps-write
 - dcb --upstreamgroup andrewrothstein --upstreamapp docker-ansible-role --pull ${OS}
   --write ${OS} --build ${OS} --push ${OS}
 services:

@@ -1,5 +1,5 @@
 ---
-galaxify_ver: '1.0.31'
+galaxify_ver: '1.0.32'
 
 # defaults file for galaxify
 galaxify_mitlicense_copyright_year: '2019'
@@ -7,7 +7,7 @@ galaxify_mitlicense_holder: Andrew Rothstein
 galaxify_mitlicense_holder_email: andrew.rothstein@gmail.com
 
 galaxify_username: andrewrothstein
-galaxify_company: BlueMountain Capital
+galaxify_company: BlackRock Financial Management
 
 galaxify_install_dir: /usr/local/bin
 

@@ -11,5 +11,6 @@ galaxify_company: BlueMountain Capital
 
 galaxify_install_dir: /usr/local/bin
 
+galaxify_python_ver: '3.7'
 galaxify_dcb_ver: '0.0.17'
 galaxify_ansiblegalaxylocaldeps_ver: '0.0.14'

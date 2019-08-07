@@ -16,6 +16,7 @@
 - fedora_28
 - fedora_29
 - fedora_30
+- debian_buster
 - debian_jessie
 - debian_stretch
 - ubuntu_trusty

@@ -1,6 +1,16 @@
 ---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
 - name: create target install dir...
-  become: yes
+  become: '{{ galaxify_privilege_escalate }}'
   become_user: root
   file:
     path: '{{ galaxify_target_dir }}'
@@ -8,7 +18,7 @@
     mode: 0755
 
 - name: templatize...
-  become: yes
+  become: '{{ galaxify_privilege_escalate }}'
   become_user: root
   with_items:
     - f: LICENSE
@@ -25,7 +35,7 @@
     mode: '{{ item.m | default("0644") }}'
 
 - name: copy...
-  become: yes
+  become: '{{ galaxify_privilege_escalate }}'
   become_user: root
   with_items:
     - f: tasks-main.yml
@@ -38,7 +48,7 @@
     mode: '{{ item.m | default("0644") }}'
 
 - name: link the released galaxify...
-  become: yes
+  become: '{{ galaxify_privilege_escalate }}'
   become_user: root
   with_items:
     - galaxify

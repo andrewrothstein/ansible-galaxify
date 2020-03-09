@@ -1,8 +1,8 @@
 ---
-galaxify_ver: '1.0.35'
+galaxify_ver: '1.0.36'
 
 # defaults file for galaxify
-galaxify_mitlicense_copyright_year: '2019'
+galaxify_mitlicense_copyright_year: '2020'
 galaxify_mitlicense_holder: Andrew Rothstein
 galaxify_mitlicense_holder_email: andrew.rothstein@gmail.com
 
@@ -14,3 +14,5 @@ galaxify_install_dir: /usr/local/bin
 galaxify_python_ver: '3.7'
 galaxify_dcb_ver: '0.0.17'
 galaxify_ansiblegalaxylocaldeps_ver: '0.0.14'
+
+galaxify_privilege_escalate: True

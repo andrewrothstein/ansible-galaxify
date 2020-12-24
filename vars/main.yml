@@ -1,4 +1,4 @@
 ---
 # vars file for galaxify
-galaxify_name: 'galaxify-{{ galaxify_ver }}'
+galaxify_name: galaxify-{{ galaxify_ver }}
 galaxify_target_dir: '{{ galaxify_install_dir }}/{{ galaxify_name }}'

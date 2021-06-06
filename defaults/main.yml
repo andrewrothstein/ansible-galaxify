@@ -1,5 +1,5 @@
 ---
-galaxify_ver: 1.0.41
+galaxify_ver: 1.0.42
 
 # defaults file for galaxify
 galaxify_mitlicense_copyright_year: '2021'
@@ -12,7 +12,7 @@ galaxify_company: BlackRock Financial Management
 galaxify_install_dir: /usr/local/bin
 
 galaxify_python_ver: '3.9'
-galaxify_dcb_ver: '0.0.17'
+galaxify_dcb_ver: '0.0.19'
 galaxify_ansiblegalaxylocaldeps_ver: '0.0.14'
 
 galaxify_privilege_escalate: True

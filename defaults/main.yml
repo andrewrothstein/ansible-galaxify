@@ -13,6 +13,6 @@ galaxify_install_dir: /usr/local/bin
 
 galaxify_python_ver: '3.9'
 galaxify_dcb_ver: '0.0.19'
-galaxify_ansiblegalaxylocaldeps_ver: '0.0.14'
+galaxify_ansiblegalaxylocaldeps_ver: '0.0.20'
 
 galaxify_privilege_escalate: True

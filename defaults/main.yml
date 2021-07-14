@@ -1,7 +1,6 @@
 ---
 galaxify_ver: 1.1.0
 
-# defaults file for galaxify
 galaxify_mitlicense_copyright_year: '2021'
 galaxify_mitlicense_holder: Andrew Rothstein
 galaxify_mitlicense_holder_email: andrew.rothstein@gmail.com
@@ -14,4 +13,4 @@ galaxify_install_dir: /usr/local/bin
 galaxify_dcb_ver: '0.1.0'
 galaxify_ansiblegalaxylocaldeps_ver: '0.1.0'
 
-galaxify_privilege_escalate: True
+galaxify_privilege_escalate: true

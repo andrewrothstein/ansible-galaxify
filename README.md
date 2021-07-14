@@ -1,8 +1,8 @@
 andrewrothstein.galaxify
 ===========================
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-galaxify.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-galaxify)
+![Build Status](https://github.com/andrewrothstein/ansible-galaxify/actions/workflows/build.yml/badge.svg)
 
-A script I use for branding/licensing Ansible roles form the get-go.
+A script I use for branding/licensing/CI/CD testing of Ansible roles form the get-go.
 
 Requirements
 ------------

@@ -27,7 +27,6 @@
       m: '0755'
     - f: meta-main.yml
     - f: test.yml
-    - f: .travis.yml
     - f: requirements.txt
   template:
     src: '{{ item.f }}.j2'
@@ -42,6 +41,7 @@
     - f: .gitignore
     - f: .pre-commit-config.yaml
     - f: dcb-os.yml
+    - f: build.yml
   copy:
     src: '{{ item.f }}'
     dest: '{{ item.d | default(galaxify_target_dir) }}/{{ item.f }}'

@@ -10,7 +10,6 @@ galaxify_company: BlackRock Financial Management
 
 galaxify_install_dir: /usr/local/bin
 
-galaxify_dcb_ver: '0.1.1'
-galaxify_ansiblegalaxylocaldeps_ver: '0.1.0'
+galaxify_dcb_ver: 0.1.2
 
 galaxify_privilege_escalate: true

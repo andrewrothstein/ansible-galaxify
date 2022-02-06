@@ -19,8 +19,8 @@ galaxy_info:
         - 8
     - name: Fedora
       versions:
-        - 34
         - 35
+        - 36
     - name: MacOSX
       versions:
         - all
@@ -30,5 +30,7 @@ galaxy_info:
         - focal
   galaxy_tags:
     - development
+  role_name: galaxify
+  namespace: andrewrothstein
 
 dependencies: []

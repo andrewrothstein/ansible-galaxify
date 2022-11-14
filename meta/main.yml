@@ -17,10 +17,11 @@ galaxy_info:
     - name: EL
       versions:
         - 8
+        - 9
     - name: Fedora
       versions:
-        - 35
         - 36
+        - 37
     - name: MacOSX
       versions:
         - all
@@ -28,9 +29,8 @@ galaxy_info:
       versions:
         - bionic
         - focal
+        - jammy
   galaxy_tags:
     - development
   role_name: galaxify
   namespace: andrewrothstein
-
-dependencies: []

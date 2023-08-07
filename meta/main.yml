@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: role to deploy galaxify.sh
+  description: role to install scripts scaffold ansible roles
   company: BlackRock
   license:
     - MIT
@@ -12,22 +12,21 @@ galaxy_info:
         - all
     - name: Debian
       versions:
+        - bookworm
         - bullseye
-        - buster
     - name: EL
       versions:
         - 8
         - 9
     - name: Fedora
       versions:
-        - 36
         - 37
+        - 38
     - name: MacOSX
       versions:
         - all
     - name: Ubuntu
       versions:
-        - bionic
         - focal
         - jammy
   galaxy_tags:

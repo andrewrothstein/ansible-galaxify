@@ -1,7 +1,7 @@
 ---
-galaxify_ver: 1.1.5
+galaxify_ver: 1.2.0
 
-galaxify_mitlicense_copyright_year: '2022'
+galaxify_mitlicense_copyright_year: '2023'
 galaxify_mitlicense_holder: Andrew Rothstein
 galaxify_mitlicense_holder_email: andrew.rothstein@gmail.com
 
@@ -9,7 +9,5 @@ galaxify_username: andrewrothstein
 galaxify_company: BlackRock Financial Management
 
 galaxify_install_dir: /usr/local/bin
-
-galaxify_dcb_ver: 0.1.2
 
 galaxify_privilege_escalate: true

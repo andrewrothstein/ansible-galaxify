@@ -4,7 +4,7 @@ DEST=$1
 SRC="{{ galaxify_target_dir }}"
 
 mkdir -p $DEST
-for FILE in .gitignore README.md LICENSE test.yml requirements.txt dcb-os.yml
+for FILE in .gitignore README.md LICENSE test.yml dcb-os.yml
 do
     cp $SRC/$FILE $DEST/$FILE
 done

@@ -3,8 +3,7 @@ galaxy_info:
   author: Andrew Rothstein
   description: role to install scripts scaffold ansible roles
   company: BlackRock
-  license:
-    - MIT
+  license: MIT
   min_ansible_version: 1.2
   platforms:
     - name: Archlinux

@@ -3,24 +3,22 @@ set -ex
 DEST=$1
 SRC="{{ galaxify_target_dir }}"
 
-mkdir -p $DEST
-for FILE in .gitignore README.md LICENSE test.yml dcb-os.yml
+for FILE in .gitignore README.md LICENSE test.yml platform-matrix-v1.json
 do
-    cp $SRC/$FILE $DEST/$FILE
+    cp "${SRC}/${FILE}" "${DEST}/${FILE}"
 done
 
-GHWFDIR="$DEST/.github/workflows"
-mkdir -p $GHWFDIR
+GHWFDIR="${DEST}/.github/workflows"
+mkdir -p "${GHWFDIR}"
 for ACTION in build.yml
 do
-    cp $SRC/$ACTION $GHWFDIR/$ACTION
+    cp "${SRC}/${ACTION}" "${GHWFDIR}/${ACTION}"
 done
 
 for MAIN in meta tasks
 do
-    mkdir -p $DEST/$MAIN
-    cp $SRC/${MAIN}-main.yml $DEST/$MAIN/main.yml
+    mkdir -p "${DEST}/${MAIN}"
+    cp "${SRC}/${MAIN}-main.yml" "${DEST}/${MAIN}/main.yml"
 done
 
-rm -f $DEST/.travis.yml
-
+rm -rf "${DEST}/.travis.yml" "${DEST}/tests"

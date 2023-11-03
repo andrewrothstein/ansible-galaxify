@@ -31,26 +31,24 @@
     dest: '{{ galaxify_target_dir }}/{{ item.f }}'
     mode: '{{ item.m | default("0644") }}'
 
-- name: copy...
+- name: copying to {{ galaxify_target_dir }}...
   become: '{{ galaxify_privilege_escalate }}'
   become_user: root
   with_items:
     - f: tasks-main.yml
     - f: .gitignore
-    - f: dcb-os.yml
+    - f: platform-matrix-v1.json
     - f: build.yml
     - f: test.yml
   copy:
     src: '{{ item.f }}'
-    dest: '{{ item.d | default(galaxify_target_dir) }}/{{ item.f }}'
+    dest: '{{ galaxify_target_dir }}/{{ item.f }}'
     mode: '{{ item.m | default("0644") }}'
 
-- name: link the released galaxify...
+- name: linking {{ galaxify_link }} to {{ galaxify_target_exe }}
   become: '{{ galaxify_privilege_escalate }}'
   become_user: root
-  with_items:
-    - galaxify
   file:
-    src: '{{ galaxify_target_dir }}/{{ item }}'
-    dest: '{{ galaxify_install_dir }}/{{ item }}'
+    src: '{{ galaxify_target_exe }}'
+    dest: '{{ galaxify_link }}'
     state: link
